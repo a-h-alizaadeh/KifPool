@@ -28,6 +28,7 @@ class WalletRepository(private val db: AppDatabase) {
                 applyEffect(newRec, 1)
                 dao.insertRecord(newRec)
             }
+            Unit
         }
     }
 
@@ -95,6 +96,7 @@ class WalletRepository(private val db: AppDatabase) {
                     dao.renameCategoryInTemplates(oldName, category.name)
                 }
             }
+            Unit
         }
     }
 
